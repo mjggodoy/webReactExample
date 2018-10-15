@@ -33,7 +33,5 @@ services:
 
   web-app:
     build: ./app
-    volumes:
-      - ./volumes/web-app:/usr/src/app/build
     ports:
       - 8080:80

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { CONSTANTS } from '../shared/Constants'
 
 class News extends Component {
@@ -24,32 +25,42 @@ class News extends Component {
 
   render() {
     if (!this.state.loading) {
-      return (
-        <div className="section">
-          <div className="container">
-              <div className="section-title">
-                  <small><span class="ti-id-badge mr-2"></span>{this.state.news.author} <span class="ti-alarm-clock mr-2"></span>{this.state.news.date}</small>
-                  <h3 class="mb-3">{this.state.news.fulltitle}</h3>
-              </div>
+      const date = new Date(this.state.news.createdAt);
 
-              <div className="row pt-4">
-                  <div className="col-md-6">
-                      <p className="light-font mb-5">{this.state.news.body}</p>
-                  </div>
+      return (
+        <section className="news bg-light">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="section-title underline">
+                  <h2>{this.state.news.fulltitle}</h2>
+                  <small>Published on {date.getFullYear()}-{date.getMonth() + 1}-{date.getDay()}</small>
+                </div>
               </div>
+              
+              <div className="col-md-12">
+                <div className="main-post">    
+                  <ReactMarkdown source={this.state.news.body} />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       );
     }
 
     return (
-      <div className="section">
-          <div className="container">
+      <section className="news">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
               <div className="section-title">
-                  <h2>Loading...</h2>
+                <h2>Loading news...</h2>
               </div>
+            </div>
           </div>
-      </div>
+        </div>
+      </section>
     );
   }
 }
