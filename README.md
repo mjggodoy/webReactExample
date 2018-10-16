@@ -7,7 +7,7 @@ This repository contains the structure of a generic React app.
 With `Docker` and `Docker-compose` installed, run:
 
 ```
-docker-compose up --build
+$ docker-compose up --build
 ```
 
 The `docker-compose.yml` file defines three containers:
@@ -42,7 +42,6 @@ Strapi will *not load* by default the collections from the existing MongoDB, so 
 4. Add the following permissions to the `Public` role:
 
 ![](resources/tutorial_4.png)
-
 
 # App project
 

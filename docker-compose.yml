@@ -2,6 +2,15 @@ version: '3'
 
 services:
 
+  reverse-proxy:
+    image: traefik
+    command: --api --docker
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
   strapi-app:
     image: strapi/strapi
     environment:
@@ -13,25 +22,25 @@ services:
       - DATABASE_USERNAME=
       - DATABASE_PASSWORD=
       - HOST=localhost
-    ports:
-      - 1337:1337
     volumes:
       - ./volumes/strapi-app:/usr/src/api/strapi-app
     depends_on:
       - strapi-db
     restart: always
+    labels:
+      - "traefik.frontend.rule=Host:api.localhost"
 
   strapi-db:
     build: ./db
     environment:
       - MONGO_INITDB_DATABASE=strapi
-    ports:
-      - 27017:27017
     volumes:
       - ./volumes/strapi-db:/data/db
     restart: always
+    labels:
+      - "traefik.enable=false"
 
   web-app:
     build: ./app
-    ports:
-      - 8080:80
+    labels:
+      - "traefik.frontend.rule=Host:web.localhost"
