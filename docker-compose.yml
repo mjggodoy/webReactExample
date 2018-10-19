@@ -1,15 +1,31 @@
-version: '3'
+version: '3.5'
 
 services:
 
   reverse-proxy:
     image: traefik
-    command: --api --docker
+    command: --web --docker --defaultentrypoints=http,https --logLevel=WARNING
     ports:
       - "80:80"
+      - "443:443"
       - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      # htpasswd -n username
+      #- "traefik.frontend.auth.basic=admin:$$apr1$$IBj9Hfsd$$kf7vXLpY4/9XD365jcp/n1"
+      - "traefik.frontend.rule=Host:traefik.localhost"
+      - "traefik.port=8080"
+
+  strapi-db:
+    build: ./db
+    environment:
+      - MONGO_INITDB_DATABASE=strapi
+    volumes:
+      - ./volumes/strapi-db:/data/db
+    restart: always
+    labels:
+      - "traefik.enable=false"
 
   strapi-app:
     image: strapi/strapi
@@ -22,25 +38,21 @@ services:
       - DATABASE_USERNAME=
       - DATABASE_PASSWORD=
       - HOST=localhost
+    expose:
+      - "1337"
     volumes:
       - ./volumes/strapi-app:/usr/src/api/strapi-app
     depends_on:
       - strapi-db
     restart: always
     labels:
+      - "traefik.backend=strapi"
       - "traefik.frontend.rule=Host:api.localhost"
-
-  strapi-db:
-    build: ./db
-    environment:
-      - MONGO_INITDB_DATABASE=strapi
-    volumes:
-      - ./volumes/strapi-db:/data/db
-    restart: always
-    labels:
-      - "traefik.enable=false"
 
   web-app:
     build: ./app
+    depends_on:
+      - strapi-app
     labels:
+      - "traefik.backend=webapp"
       - "traefik.frontend.rule=Host:web.localhost"

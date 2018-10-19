@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import NewsSection from './NewsSection';
+import ClientsLogos from './ClientsLogos';
 
 class LandingPage extends Component {
 
@@ -29,15 +30,11 @@ const Header = () => {
             <p className="lead">
               Website with <span className="underline-magical">fancy</span> description.
             </p>
-            <ul className="list-unstyled">
-              <li><span className="badge badge-light">One</span> Just</li>
-              <li><span className="badge badge-light">Two</span> a list.</li>
-            </ul>
           </div>
         </div>
       </div>
       <div className="container text-center">
-        <img src="assets/images/client-logos.png" alt="client logos" className="img-fluid"/>
+        <ClientsLogos />
       </div>
     </header>
   );

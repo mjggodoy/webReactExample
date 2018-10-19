@@ -15,13 +15,16 @@ class NewsSection extends Component {
   }
 
   async componentDidMount() {
-    let response = await fetch(`${CONSTANTS.API.url}/news`);
-    if (!response.ok) {
-      return
-    }
-
-    let data = await response.json()
-    this.setState({ loading: false, news: data.reverse() })
+    fetch(`http://${CONSTANTS.API.url}/news`)
+      .then((response) => {
+        return response.json()
+      })
+      .then((news) => {
+        this.setState({
+          loading: false,
+          news: news.reverse()
+        })
+      })
   }
 
   render() {
@@ -43,7 +46,7 @@ class NewsSection extends Component {
                   const date = new Date(news.createdAt)
 
                   return (
-                    <div className="col-md-4">
+                    <div key={news.id} className="col-md-4">
                       <div className="post">
                         <Link className="post-img" to={`/news/${news.id}`}>
                           {
@@ -79,7 +82,7 @@ class NewsSection extends Component {
           <div className="row">
             <div className="col-md-12">
               <div className="section-title">
-                <h2>Loading news...</h2>
+                <h2>Loading news<span className="loading-dots"></span></h2>
               </div>
             </div>
           </div>

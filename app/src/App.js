@@ -68,12 +68,7 @@ const Footer = () => {
           <div className="col-lg-6 h-100 text-center text-lg-right my-auto">
             <ul className="list-inline mb-0">
               <li className="list-inline-item mr-3">
-                <Link to="#">
-                  <i className="fab fa-facebook-square fa-2x fa-fw"></i>
-                </Link>
-              </li>
-              <li className="list-inline-item mr-3">
-                <Link to="#">
+                <Link to="https://twitter.com/khaosresearch?lang=es">
                 <i className="fab fa-twitter-square fa-2x fa-fw"></i>
                 </Link>
               </li>

@@ -14,13 +14,16 @@ class News extends Component {
   }
 
   async componentDidMount() {
-    let response = await fetch(`${CONSTANTS.API.url}/news/${this.props.match.params.id}`)
-    let data = await response.json()
-    
-    this.setState({
-      loading: false,
-      news: data
-    })
+    fetch(`http://${CONSTANTS.API.url}/news/${this.props.match.params.id}`)
+      .then((response) => {
+        return response.json()
+      })
+      .then((news) => {
+        this.setState({
+          loading: false,
+          news: news
+        })
+      })
   }
 
   render() {
