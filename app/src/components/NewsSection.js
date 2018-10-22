@@ -42,7 +42,6 @@ class NewsSection extends Component {
 
               {
                 this.state.news.map((news) => {
-                  // map content to html elements
                   const date = new Date(news.createdAt)
 
                   return (
@@ -82,7 +81,7 @@ class NewsSection extends Component {
           <div className="row">
             <div className="col-md-12">
               <div className="section-title">
-                <h2>Loading news<span className="loading-dots"></span></h2>
+                <div class="spinner"></div>
               </div>
             </div>
           </div>
