@@ -32,13 +32,12 @@ class NewsSection extends Component {
         There are many vocabularies and OWL representations which are being produced about agronomic data for the last few years.
         However, there are so many data sources that are spread out that stored in different formats and standards. 
         Therefore, the objective of this project is to create a common platform that stores information in which different standards 
-        following the preinciples of Linked Open Data that support the use of standards (RDF) and vocabularies (SKOS). 
+        follow the principles of Linked Open Data. These principles support the use of standards (RDF) and vocabularies (SKOS). 
         The data model that was used correspond to an OWL representation very accepted by the scientific community in the agronomic domain.
         </p>
       </div>
     </header>
     );
-  
 }
 
 export default NewsSection;
