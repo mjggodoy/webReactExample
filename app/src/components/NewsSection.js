@@ -14,7 +14,7 @@ class NewsSection extends Component {
   }
 }
   
-  const Body = () => {
+const Body = () => {
     return (
       <header className="text-center text-white">
       <div className="overlay"></div>
@@ -36,8 +36,8 @@ class NewsSection extends Component {
         The data model that was used correspond to an OWL representation very accepted by the scientific community in the agronomic domain.
         </p>
       </div>
-    </header>
-    );
+    </header> 
+  );
 }
 
 export default NewsSection;
