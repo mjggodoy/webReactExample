@@ -18,18 +18,17 @@ class LandingPage extends Component {
 const Header = () => {
   return (
     <header className="text-center text-white">
-      <div className="overlay"></div>
       <video playsInline="playsinline" autoPlay="autoplay" muted="muted" loop="loop">
-          <source src="assets/videos/loop.mov" type="video/mp4"></source>
+          <source src="assets/videos/field.mp4" type="video/mp4"></source>
       </video>
       <div className="container">
         <div className="row">
           <div className="col-lg-12 text-center">
-            <img src="assets/images/logo.svg" alt="logo" className="img-fluid" style={{height: 180 + "px"}}/>
-            <h1 className="mt-5">Website title</h1>
+            <h1 className="mt-5">AgroPortal</h1>
             <p className="lead">
-              Website with <span className="underline-magical">fancy</span> description.
+              The website of this project trying to satisfy the needs of the agronomy community. 
             </p>
+            <img src="assets/images/logos/khaos.png" alt="logo" className="img-fluid" style={{height: 180 + "px"}}/>
           </div>
         </div>
       </div>
