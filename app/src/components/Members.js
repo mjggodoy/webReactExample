@@ -16,7 +16,7 @@ const Body = () => {
     return ( 
     <div className="container">
         <h1 className="my-4">About Us</h1>
-        <h5>  Contact information about the group's members</h5>
+        <h5>Contact information about the group's members</h5>
      
     <div className="row">
         <div className="col-lg-12">
@@ -30,7 +30,7 @@ const Body = () => {
       <h3>José F. Aldana Montes, PhD <br/>
         <small>Full Professor</small>
       </h3>
-      <p>He is a professor belonging of the department of Conputer Languages and Computer Sciences from the University of Malaga. 
+      <p>He is a professor belonging of the Department of Conputer Languages and Computer Sciences from the University of Malaga. 
           He has more than 20 years of experience in researching and teaching about the databases field. 
           His particular fields of interests are Semantic Middleware, Semantic Web, Semantic Data and Application Integation 
           and Database Extension usign formal semantics.<br/>
@@ -45,7 +45,7 @@ const Body = () => {
         <small>Full Professor</small>
       </h3>
       <p>
-          He is a professor belonging of the department of Computer Languages and Computer Sciences from the University of Malaga. 
+          He is a professor belonging of the Department of Computer Languages and Computer Sciences from the University of Malaga. 
           He has more than 20 years of experience in researching metaheuristics applied to solve problems in different fields. 
           His main contribution has been jMetal, which is a framework that integrates mono- and multi-objective metaheuristics.<br/>
           <strong>Email:</strong>  <a href="mailto:antonio@lcc.uma.es">antonio@lcc.uma.es</a><br/>
@@ -59,7 +59,7 @@ const Body = () => {
         <small>Full Professor</small>
       </h3>
       <p>
-          He is a professor belonging of the department of Computer Languages and Computer Sciences from the University of Malaga. He obtained his PhD in 2009 and has two masters' degrees in computer science and molecular and cellular biology.
+          He is a professor belonging of the Department of Computer Languages and Computer Sciences from the University of Malaga. He obtained his PhD in 2009 and has two masters' degrees in computer science and molecular and cellular biology.
           His main research lines are Web Semantics and Data Integration applied to fields such as Life Sciences.<br/>
           <strong>Email:</strong><a href="mailto:ismael@lcc.uma.es"> ismael@lcc.uma.es</a><br/>
           <strong>Phone:</strong>  +951952921 <br/>
@@ -72,7 +72,7 @@ const Body = () => {
         <small>Associate Professor</small>
       </h3>
       <p>
-          She is a professor belonging of the department of Computer Languages and Computer Sciences from the University of Malaga. 
+          She is a professor belonging of the department of Computer Languages and Computer Sciences from the University of Málaga. 
           She has currently different reseatch lines based on ontology modelling, OWL reasoning and Bioinformatics<br/>
           <strong>Email:</strong><a href="mailto:mmar@lcc.uma.es"> mmar@lcc.uma.es</a><br/>
           <strong>Phone:</strong> 951952922 <br/>
@@ -85,7 +85,7 @@ const Body = () => {
         <small>Researcher</small>
       </h3>
       <p>
-          He is a senior researcher at the deartment of Computer Languages and Computer Sciences from the University of Malaga.<br/>
+          He is a senior researcher at the Department of Computer Languages and Computer Sciences from the University of Málaga.<br/>
           He has a very wide experience in applying metaheuristics to solve problems in different fields such as the problem of traffic in cites or the molecular docking problem. <br/>
           <strong>Email:</strong><a href="mailto:jnieto@lcc.uma.es"> jnieto@lcc.uma.es</a><br/>
           <strong>Phone:</strong> 951952924 <br/>
@@ -99,7 +99,7 @@ const Body = () => {
 }
 
 const ImageProfile = {
-    width: "100px",
+  width: "100px",
 }
 
 const ImageProfileIsma = {
