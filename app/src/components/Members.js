@@ -21,12 +21,12 @@ const Body = () => {
     <div className="row">
         <div className="col-lg-12">
         <h2 className="my-4">Our Team: </h2>
-        <h5 className="my-4">For more information click on the Khaos's web group: <a href="http://khaos.uma.es/">Khaos Website</a><br/></h5>
+        <h5 className="my-4">For more information click on the Khaos's web group: <a href="http://khaos.uma.es/" target="_blank">Khaos Website</a><br/></h5>
 
     </div>
    
     <div className="col-lg-4 col-sm-6 text-center mb-4">
-      <img className="rounded-circle img-fluid d-block mx-auto" src="/assets/images/membersGroup/JFAM.jpg" alt="Jose Aldana Montes"></img>
+      <img className="rounded-circle img-fluid d-block mx-auto" src="/assets/images/membersGroup/JFAM.jpg" alt="Jose Aldana Montes" style = {ImageProfile}></img>
       <h3>José F. Aldana Montes, PhD <br/>
         <small>Full Professor</small>
       </h3>
@@ -54,7 +54,7 @@ const Body = () => {
     </p>
     </div>
     <div className="col-lg-4 col-sm-6 text-center mb-4">
-      <img className="rounded-circle img-fluid d-block mx-auto" src="/assets/images/membersGroup/Ismael.jpg" alt="Ismael Navas Delgado" style = {ImageProfileIsma}></img>
+      <img className="rounded-circle img-fluid d-block mx-auto" src="/assets/images/membersGroup/Ismael2.jpg" alt="Ismael Navas Delgado" style = {ImageProfileIsma}></img>
       <h3>Ismael Navas Delgado, PhD<br/>
         <small>Full Professor</small>
       </h3>
@@ -66,8 +66,8 @@ const Body = () => {
           <strong>Postal address:</strong> A.2.1 Ada Byron Research Building (Ampliación de la Universidad, Teatinos, Málaga)<br/>
     </p>
     </div>
-    <div className="col-lg-4 col-sm-6 text-center mb-4">
-      <img className="rounded-circle img-fluid d-block mx-auto" src="/assets/images/membersGroup/MMar.jpg" alt="María del Mar Roldán" style = {ImageProfileIsma}></img>
+    <div className="col-lg-4 col-sm-6 text-center mb-4" style = {margenImage}>
+      <img className="rounded-circle img-fluid d-block mx-auto" src="/assets/images/membersGroup/MMar.jpg" alt="María del Mar Roldán" style = {ImageProfileMmar}></img>
       <h3>María del Mar Roldán García, PhD<br/>
         <small>Associate Professor</small>
       </h3>
@@ -79,7 +79,7 @@ const Body = () => {
           <strong>Postal address:</strong> A.2.1 Ada Byron Research Building (Ampliación de la Universidad, Teatinos, Málaga)<br/>
     </p>
     </div>
-    <div className="col-lg-4 col-md-20 text-center mb-4">
+    <div className="col-lg-4 col-md-20 text-center mb-4" style = {margenImage}>
       <img className="rounded-circle img-fluid d-block mx-auto" src="/assets/images/membersGroup/JoseManuel.png" alt="" style = {ImageProfile}></img>
       <h3>José Manuel García Nieto, PhD<br/>
         <small>Researcher</small>
@@ -100,10 +100,24 @@ const Body = () => {
 
 const ImageProfile = {
   width: "100px",
+  height: "130px",
 }
 
 const ImageProfileIsma = {
-    width: "130px",
+    width: "100px",
+    height: "125px",
+
+}
+
+const ImageProfileMmar = {
+  width: "115px",
+  height: "135px",
+
+}
+  
+const margenImage = {
+  left: "200px",
+
 }
   
 
