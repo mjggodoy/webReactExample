@@ -21,7 +21,7 @@ const Body = () => {
     <div className="row">
         <div className="col-lg-12">
         <h2 className="my-4">Our Team: </h2>
-        <h5 className="my-4">For more information click on the Khaos's web group: <a href="http://khaos.uma.es/" target="_blank">Khaos Website</a><br/></h5>
+        <h5 className="my-4">For more information click on the Khaos's web group: <a href="http://khaos.uma.es/" target="_blank"> Khaos Website</a><br/></h5>
 
     </div>
    
@@ -82,7 +82,7 @@ const Body = () => {
     <div className="col-lg-4 col-md-20 text-center mb-4" style = {margenImage}>
       <img className="rounded-circle img-fluid d-block mx-auto" src="/assets/images/membersGroup/JoseManuel.png" alt="" style = {ImageProfile}></img>
       <h3>José Manuel García Nieto, PhD<br/>
-        <small>Researcher</small>
+        <small>Senior Researcher</small>
       </h3>
       <p>
           He is a senior researcher at the Department of Computer Languages and Computer Sciences from the University of Málaga.<br/>
