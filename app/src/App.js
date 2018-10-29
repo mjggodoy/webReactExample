@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom'
 import LandingPage from './components/LandingPage';
 import ContactPage from './components/ContactPage';
 import Members from './components/Members';
+import Research from './components/Research';
+
 
 
 class App extends Component {
@@ -16,6 +18,7 @@ class App extends Component {
           <Nav />
           <Switch>
             <Route path="/" exact component={LandingPage} />
+            <Route path="/research" exact component={Research} />
             <Route path="/contact" exact component={ContactPage} />
             <Route path="/members" exact component={Members} />
           </Switch>
@@ -40,6 +43,9 @@ const Nav = () => {
               <NavLink className="nav-link" activeClassName="active" exact to="/">Home</NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" activeClassName="active" exact to="/research">Research</NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" activeClassName="active" exact to="/members">Members</NavLink>
             </li>
             <li className="nav-item">
@@ -61,6 +67,10 @@ const Footer = () => {
             <ul className="list-inline mb-2">
               <li className="list-inline-item">
                 <NavLink exact to="/">Home</NavLink>
+              </li>
+              <li className="list-inline-item">&sdot;</li>
+              <li className="list-inline-item">
+                <NavLink exact to="/research">Research</NavLink>
               </li>
               <li className="list-inline-item">&sdot;</li>
               <li className="list-inline-item">
