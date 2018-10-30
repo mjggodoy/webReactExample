@@ -21,7 +21,7 @@ const Body = () => {
     <div className="row">
         <div className="col-lg-12">
         <h2 className="my-4">Our Team: </h2>
-        <h5 className="my-4">For more information click on the Khaos's web group: <a href="http://khaos.uma.es/" target="_blank"> Khaos Website</a><br/></h5>
+        <h5 className="my-4">For more information click on the Khaos's web group: <a href="http://khaos.uma.es/" target="_blank" rel="noopener noreferrer"> Khaos Website</a><br/></h5>
 
     </div>
    

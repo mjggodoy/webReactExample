@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from "react-router";
 import { NavLink } from 'react-router-dom'
-import { Link } from 'react-router-dom'
 
 import LandingPage from './components/LandingPage';
 import ContactPage from './components/ContactPage';
@@ -81,12 +80,12 @@ const Footer = () => {
                 <NavLink exact to="/contact">Contact</NavLink>
               </li>
             </ul>
-            <p className="text-muted small mb-4 mb-lg-0">Copyright &copy; University of Málaga. All rights reserved. Powered by <a href="http://khaos.uma.es/">Khaos research</a>.</p>
+            <p className="text-muted small mb-4 mb-lg-0">Copyright &copy; University of Málaga. All rights reserved. Powered by <a href="http://khaos.uma.es/" target="_blank" rel="noopener noreferrer">Khaos research</a>.</p>
           </div>
           <div className="col-lg-6 h-100 text-center text-lg-right my-auto">
             <ul className="list-inline mb-0">
               <li className="list-inline-item mr-3">
-                <a href="https://twitter.com/khaosresearch?lang=es" target="_blank"><i className="fab fa-twitter-square fa-2x fa-fw"></i></a>
+                <a href="https://twitter.com/khaosresearch?lang=es" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter-square fa-2x fa-fw"></i></a>
               </li>
             </ul>
           </div>
