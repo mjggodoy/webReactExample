@@ -56,7 +56,8 @@ const Body = () => {
         However, there are so many data sources that are spread out and have been stored in different formats and standards. 
         Therefore, the objective of this project is to create a common platform that stores information in different standards that follow
         the principles of Open Linked Data. These principles support the use of standards (RDFs and OWLs) and vocabularies (SKOS). In this context, 
-        one of the main objectives is to provide a data scheme to integrate the converted RDF agronomioc information retreived from diffetent data sources. 
+        one of the main objectives is to provide a data scheme to integrate the converted RDF agronomioc information retreived from diffetent data 
+        sources in order to making this RDF repository a global reference in  
         </p>
       </div>
     </header> 
