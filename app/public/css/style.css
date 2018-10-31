@@ -11,6 +11,8 @@ h5,
 h6 {
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
+    margin-bottom: 10px;
+
 }
 
 a {
@@ -284,3 +286,11 @@ footer a {
 footer a:hover {
     color: rgba(255,255,255,.75)
 }
+
+/* MEMBERS */
+
+.list-group{
+
+    margin-bottom: 20px;
+}
+
