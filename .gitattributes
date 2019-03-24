@@ -1,0 +1,6 @@
+WiredTigerPreplog.0000000002 filter=lfs diff=lfs merge=lfs -text
+WiredTigerPreplog.0000000003 filter=lfs diff=lfs merge=lfs -text
+field.mp4 filter=lfs diff=lfs merge=lfs -text
+loop.mov filter=lfs diff=lfs merge=lfs -text
+WiredTigerLog.0000000016 filter=lfs diff=lfs merge=lfs -text
+WiredTigerPreplog.0000000001 filter=lfs diff=lfs merge=lfs -text
